@@ -1,0 +1,175 @@
+:root {
+  --main-color: #f54b55;
+  --second-color: #efeff0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+img {
+  cursor: pointer;
+  /* width: 5%; */
+}
+
+#lang {
+  margin-right: 5px;
+}
+
+span {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+
+.container {
+  background: #fff;
+  height: 100vh;
+  width: 100%;
+}
+
+.card img {
+  transition: all 0.3s ease;
+}
+
+.card:hover img {
+  opacity: 0.7;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  text-transform: uppercase;
+}
+
+.card-text {
+  color: #5a5a5a;
+}
+
+.btn {
+  width: 100%;
+}
+
+.card-body .lecBtn {
+  background: #b35aae;
+  width: 70%;
+  color: #fff;
+}
+
+.card-body .lecBtn:hover {
+  background: #a752a1;
+  color: #fff;
+}
+
+.card-body .lecBtn2 {
+  border: 1px solid #b35aae;
+  width: 25%;
+  color: #b35aae;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.card-body .lecBtn2:hover {
+  background: #b35aae;
+  color: #fff;
+}
+
+.card-body .stdBtn {
+  width: 70%;
+}
+
+.card-body .stdBtn2 {
+  width: 25%;
+  margin-left: 10px;
+}
+
+@media (max-width: 900px) {
+  .flex-div{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+  }
+}
+
+/* header */
+.flex-div {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  padding: 10px 2%;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0 0 0 / 0.2);
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 50px;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-left img {
+  width: 25px;
+  margin-right: 25px;
+}
+
+.nav-left .logo {
+  width: 35px;
+}
+
+.nav-middle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-middle img {
+  width: 16px;
+}
+
+.nav-middle .search-box {
+  border: 1px solid #ccc;
+  margin-right: 15px;
+  padding: 8px 12px;
+  border-radius: 25px;
+}
+
+.nav-middle .search-box input {
+  width: 400px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.nav-middle .search-box img {
+  width: 15px;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-right .profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-right .profile a {
+  padding-right: 15px;
+  text-decoration: none;
+  color: #5a5a5a;
+  font-weight: 600;
+}

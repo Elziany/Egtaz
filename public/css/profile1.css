@@ -1,0 +1,39 @@
+:root {
+  --body-color: #fff;
+  --container-color: #eee;
+  --container-color-alt: #ddd;
+  --border-color-light: #cfcccc;
+  --scroll-color: #888091;
+  --dropdown-shadow: #b6a2a2;
+  --text-color: #000;
+  --placeholder-color: #666;
+  --header-shadow: #f3e7f3;
+}
+
+.shortcut-links a:first-child,
+.shortcut-links a:nth-child(2) {
+  color: var(--text-color);
+}
+.shortcut-links a:nth-child(3) {
+  color: #ed3833;
+}
+
+.shortcut-links a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: fit-content;
+  flex-wrap: wrap;
+  color: var(--text-color);
+}
+
+.shortcut-links a p {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .shortcut-links a {
+    margin-bottom: 20px;
+  }
+}

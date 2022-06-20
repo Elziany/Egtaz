@@ -1,0 +1,124 @@
+:root {
+  --body-color: #fff;
+  --container-color: #eee;
+  --container-color-alt: #ddd;
+  --border-color-light: #cfcccc;
+  --scroll-color: #888091;
+  --dropdown-shadow: #b6a2a2;
+  --text-color: #000;
+  --placeholder-color: #666;
+  --header-shadow: #f3e7f3;
+}
+
+.shortcut-links a:first-child,
+.shortcut-links a:nth-child(2) {
+  color: var(--text-color);
+}
+.shortcut-links a:nth-child(3) {
+  color: #ed3833;
+}
+
+.shortcut-links a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: fit-content;
+  flex-wrap: wrap;
+  color: var(--text-color);
+}
+
+.shortcut-links a p {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.container-xl {
+  margin-left: 15%;
+  background: var(--container-color);
+}
+body {
+  background-color: var(--container-color);
+  color: var(--text-color);
+}
+.img-account-profile {
+  height: 10rem;
+}
+.rounded-circle {
+  border-radius: 50% !important;
+}
+.card {
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(255, 255, 255, 0.15);
+}
+.card .card-header {
+  font-weight: 500;
+}
+.card-header:first-child {
+  border-radius: 0.35rem 0.35rem 0 0;
+}
+.card-header {
+  padding: 1rem 1.35rem;
+  margin-bottom: 0;
+  background-color: rgba(33, 40, 50, 0.03);
+  border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+}
+.form-control,
+.dataTable-input {
+  display: block;
+  width: 100%;
+  padding: 0.875rem 1.125rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #69707a;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #c5ccd6;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.35rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.nav-borders .nav-link.active {
+  color: #ed3833;
+  border-bottom-color: #ed3833;
+}
+.nav-borders .nav-link {
+  color: var(--text-color);
+  border-bottom-width: 0.125rem;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+label {
+  color: #000000;
+}
+
+#display_image {
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 900px) {
+  .container-xl {
+    margin-left: 0%;
+  }
+  .shortcut-links a {
+    margin-bottom: 20px;
+  }
+}

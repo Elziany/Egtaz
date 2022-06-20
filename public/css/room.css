@@ -1,0 +1,18 @@
+:root {
+  --body-color: #fff;
+  --container-color: #eee;
+  --container-color-alt: #ddd;
+  --border-color-light: #cfcccc;
+  --scroll-color: #888091;
+  --dropdown-shadow: #b6a2a2;
+  --text-color: #000;
+  --placeholder-color: #666;
+  --header-shadow: #f3e7f3;
+}
+
+.shortcut-links a:first-child {
+  color: var(--text-color);
+}
+.shortcut-links a:nth-child(2) {
+  color: #ed3833;
+}

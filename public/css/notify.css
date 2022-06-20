@@ -1,0 +1,49 @@
+:root {
+  --body-color: #fff;
+  --container-color: #eee;
+  --container-color-alt: #ddd;
+  --border-color-light: #cfcccc;
+  --scroll-color: #888091;
+  --dropdown-shadow: #b6a2a2;
+  --text-color: #000;
+  --placeholder-color: #666;
+  --header-shadow: #f3e7f3;
+}
+
+.shortcut-links a:first-child,
+.shortcut-links a:nth-child(2),
+.shortcut-links a:nth-child(3),
+.shortcut-links a:nth-child(4) {
+  color: var(--text-color);
+}
+.shortcut-links a:nth-child(5) {
+  color: #ed3833;
+}
+
+.note {
+  display: flex;
+  justify-content: flex-start;
+  background: var(--container-color-alt);
+  padding: 15px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.note:hover {
+  background: var(--container-color);
+}
+
+.note .imgs {
+  margin-right: 15px;
+}
+
+.note .txt p {
+  color: var(--text-color);
+}
+
+.note .txt span {
+  color: #888091;
+}
