@@ -27,6 +27,8 @@ return new class extends Migration
             $table->string('correct_answer3');
             $table->integer('question_degree');
             $table->integer('exam_id');
+            $table->string('name');
+
 
 
 

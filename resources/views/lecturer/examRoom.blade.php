@@ -5,8 +5,8 @@
             <img src="{{asset('../images/banner.jpg')}}" alt="trivial-exam" title="Trivial Exam">
         </div>
         <div class="list-container">
-        @foreach($lecturer->exam as $exam)
-        @if($exam->room_code ===$code)
+        @foreach($exams as $exam)
+        
         
             <div class="vid-list">
                 <a href="{{route('examForm',[$lecturer->id,$exam->id])}}"><img src="{{asset($exam->image)}}" alt="exam1" class="thumbnail"></a>
@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            @endif
+        
             @endforeach
 <a href="{{route('examCreatorPage',[$lecturer->id,$code])}}"><img src="{{asset('../images/quest.png')}}" id="myBtn" title="{{__('room.create_question')}}"></a>
 @endsection

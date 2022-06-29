@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('lecturer_id')->unsigned()->nullable();
             $table->integer('student_id')->unsigned()->nullable();
             $table->string('image');
-            $table->string('country');
+            $table->string('country')->nullable();
             $table->string('phone')->nullable();
             $table->timestamps();
             $table->foreign('lecturer_id')->references('id')->on('lecturer')

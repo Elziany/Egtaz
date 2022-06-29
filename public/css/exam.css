@@ -144,7 +144,7 @@ body {
   left: 50%;
   transform: translateX(-50%) scale(0.9);
   box-shadow: 0px 4px 8px 0 rgba(0 0 0 / 0.2), 0px 6px 20px 0 rgba(0 0 0 / 0.19);
-  /* margin-top: 100px; */
+  margin-top: 100px;
 }
 
 .quiz_box header {
@@ -169,7 +169,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 145px;
+  width: 195px;
   height: 45px;
   background: #cce5ff;
   border: 1px solid #b8daff;
@@ -188,7 +188,7 @@ body {
   font-weight: 500;
   background: #343a40;
   height: 30px;
-  width: 45px;
+  width: 95px;
   color: #fff;
   text-align: center;
   line-height: 30px;
@@ -233,6 +233,8 @@ body {
 .quiz_box section .option_list {
   padding: 20px 0;
   display: block;
+  margin-left: 10%;
+  
 }
 
 .quiz_box section .option_list .option {
@@ -247,7 +249,20 @@ body {
   justify-content: space-between;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
+  width: 90%;
 }
+
+.quiz_box section .option_list .option input{
+  position: absolute;
+  float: left;
+}
+
+.quiz_box section .option_list .option label{
+  padding-left: 20px;
+  cursor: pointer;
+}
+
 .quiz_box section .option_list .option:hover {
   color: #004085;
   background: #cce5ff;
@@ -262,7 +277,7 @@ body {
   background: aliceblue;
   border: 1px solid #84c5fe;
   border-radius: 5px;
-  width: 100%;
+  width: 90%;
   padding: 8px 15px;
   font-size: 17px;
 }
@@ -302,8 +317,8 @@ footer .tool_que span p:first-child {
 }
 
 footer .next_btn {
-  height: 40px;
-  padding: 0 13px;
+  height: 50px;
+  padding: 0 53px;
   font-size: 18px;
   font-weight: 400;
   border: none;

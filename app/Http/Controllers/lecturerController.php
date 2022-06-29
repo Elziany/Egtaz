@@ -41,13 +41,16 @@ class lecturerController extends Controller
         $pass=$request->password;
         $repass=$request->repassword;
         if($pass===$repass){
-            Lecturer::create([
+           $lecturer= Lecturer::create([
                     'name'=>$request->name,
                     'password'=>Hash::make($request->password),
                     'email'=>$request->email,
                     'specialization'=>$request->specialization
             ]);
-            return redirect()->route('lecturerlogin');
+            session()->put('username',$lecturer->name);
+            session()->put('email',$lecturer->email);
+            
+                   return redirect()->route('lecturerroom',compact('lecturer'));
 
         }
         else{
@@ -92,7 +95,7 @@ class lecturerController extends Controller
                 'image'=>'images/avatar.png',//default image
                 'phone'=>null,//default number
                 'studentphone'=>'nullable',
-                'country'=>null,//default number
+                'country'=>' ',//default number
                 'lecturer_id'=>$lecturer->id,//default number
                 'student_id'=>null
 
@@ -192,8 +195,8 @@ class lecturerController extends Controller
                 return redirect()->back()->with('success','password changed successfuly');
             }
             else{
-                session()->put('username',"");
-                return redirect()->route('lecturerlogin')->with('msg','Invalid current password you are unauthorized');
+                return redirect()->back()->with('fail','current password is incorrect');
+
              
      
             }
@@ -243,9 +246,10 @@ function lecturernotification(){
           /// exam room
           function examRoom($id,$code){
             $lecturer=Lecturer::find($id);
-            $room=$lecturer->room()->where('code',$code)->first();
+            $exams=$lecturer->exam->where('room_code',$code);
+            
            
-           return view('lecturer.examRoom',compact(['lecturer','code']));
+           return view('lecturer.examRoom',compact(['lecturer','code','exams']));
            
         }
         //create page of the exam

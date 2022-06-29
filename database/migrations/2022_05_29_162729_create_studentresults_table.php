@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('studentresults', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->integer('student_id');
+            $table->integer('lecturer_id');
             $table->integer('exam_id');
             $table->double('total_degree');
             $table->double('exam_degree');

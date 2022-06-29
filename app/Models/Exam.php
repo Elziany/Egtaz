@@ -10,7 +10,7 @@ class Exam extends Model
     use HasFactory;
     protected $table="exam";
     protected $fillable=[
-       'exam_name', 'lecturer_id','student_id','question_number','student_degree','exam_name','start_date','end_date','image','room_code'
+       'exam_name', 'lecturer_id','student_id','question_number','student_degree','exam_name','start_date','end_date','image','room_code','total_degree'
     ];
     function Lecturer(){
         return $this->belongsTo(Lecturer::class,'lecturer_id');

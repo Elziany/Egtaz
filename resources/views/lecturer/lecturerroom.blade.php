@@ -25,8 +25,11 @@
                     <div class="vid-info">
                         <a href="">{{$room->subject}}</a>
                         <p>Code: {{$room->code}}
+                        <br>
+                         Student Numbers : {{$room->studentRoom->count()}}
                             <br>
-                            {{$lecturer->name}}
+                          Dr:  {{$lecturer->name}}
+                          
                         </p>
                         
                     </div>

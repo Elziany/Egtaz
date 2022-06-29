@@ -21,6 +21,8 @@ return new class extends Migration
             $table->integer('lecturer_id')->unsigned();
             $table->integer('student_id')->nullable();
             $table->integer('question_number')->unsigned();
+            $table->integer('total_degree')->unsigned();
+
             $table->integer('student_degree')->nullable();
             $table->timestamp('start_date')->nullable();
             

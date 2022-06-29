@@ -11,7 +11,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Main CSS Files -->
         <link rel="stylesheet" href="{{asset('../css/exam.css')}}">
-        <link rel="stylesheet" href="{{asset('../css/main.css')}}">
         <!-- Logo Icon -->
     <link rel="icon" href="../images/new-egtaz-2.png">
 </head>
@@ -27,8 +26,8 @@
     </div>
 
     <div class="info_list modal_body">
-        <div class="info"><span>1.</span> You will have only <span>1:30 minutes</span> per the exam.</div>
-        <div class="info"><span>2.</span> The total degree of the exam is <span>100 points</span>.</div>
+        <div class="info"><span>1.</span> You will have only <span>{{intval(date('h:i',strtotime($exam->end_date)))-intval(date('h:i'))}}</span>hours per the exam.</div>
+        <div class="info"><span>2.</span> The total degree of the exam is <span>{{$exam->total_degree}} points</span>.</div>
         <div class="info"><span>3.</span> One you select your answer, you can't reselect.</div>
         <div class="info"><span>4.</span> You can't exit from the Quiz while you're playing.</div>
         <div class="info"><span>5.</span> You'll get points on the basis of your correct answers.</div>
@@ -46,7 +45,7 @@
             <div class="title">{{$exam->exam_name}}</div>
             <div class="timer">
                 <div class="time_text">Time Left</div>
-                <div class="time_sec" id="counter">{{date('Y-M-D H:I:S',strtotime($exam->end_date))}}</div>
+                <div class="time_sec" id="counter"></div>
             </div>
         </header>
 
@@ -171,9 +170,10 @@
     <script>
      
         var timer=document.querySelector('#counter');
-    
-      
+        time={{mktime(intval(date('h:i',strtotime($exam->end_date))))-mktime(intval(date('h:i')))}};
+        timer.innerHTML=Date().getMinutes();
 
+        
 
     </script>
     

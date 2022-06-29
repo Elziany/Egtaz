@@ -15,6 +15,6 @@ class profile extends Model
     }
 
     function student(){
-        return $this->belongsTo(Student::class,'student_id');
+        return $this->belongsTo(Student::class,'student_id')->notNull();
     }
 }

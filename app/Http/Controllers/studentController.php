@@ -42,13 +42,16 @@ class studentController extends Controller
         $pass=$request->password;
         $repass=$request->repassword;
         if($pass===$repass){
-            Student::create([
+           $student= Student::create([
                     'name'=>$request->name,
                     'password'=>Hash::make($request->password),
                     'email'=>$request->email,
                     'acadmicyear'=>$request->acadmicyear
             ]);
-            return redirect()->route('studentlogin');
+            session()->put('username',$student->name);
+            session()->put('email',$student->email);
+            
+                   return redirect()->route('studentroom',compact('student'));
 
         }
         else{
@@ -88,12 +91,13 @@ class studentController extends Controller
         $name=session()->get('username');
         
             $student=Student::where('email',$email)->first();
-            if($student->profile ===null){
+            $profile=Profile::where('student_id',$student->id)->first();
+            if($profile===null){
             profile::create([
                 'image'=>'images/avatar.png',//default image
                 'phone'=>'+20_123_456_789',//default number
-                'studentphone'=>'nullable',
-                'country'=>'egypt',//default number
+                'studentphone'=>'+20_123_456_789',
+                'country'=>' ',//default value
                 'lecturer_id'=>null,//default number
                 'student_id'=>$student->id,//default number
 
@@ -195,9 +199,8 @@ class studentController extends Controller
                 return redirect()->back()->with('success','password changed successfuly');
             }
             else{
-                session()->put('username',"");
-                return redirect()->route('studentlogin')->with('msg','Invalid current password you are unauthorized');
-             
+                return redirect()->back()->with('fail','incorrect current password');
+
      
             }
 
@@ -225,7 +228,7 @@ class studentController extends Controller
         
         Notification::send($lecturer,new join($student,$room,'STUDENT'));
         event(new message($student->email.' send you request to join your room '.$room->name,$lecturer->id));
-        return redirect()->route('studentroom');
+        return redirect()->route('studentroom',compact('student'));
     }
 ///// notification page
 function Notification(){

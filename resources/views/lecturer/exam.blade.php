@@ -11,7 +11,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Main CSS Files -->
         <link rel="stylesheet" href="{{asset('../css/exam.css')}}">
-        <link rel="stylesheet" href="{{asset('../css/main.css')}}">
         <!-- Logo Icon -->
     <link rel="icon" href="../images/new-egtaz-2.png">
 </head>
