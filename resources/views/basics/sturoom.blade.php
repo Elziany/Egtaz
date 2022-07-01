@@ -76,7 +76,7 @@
             <a  href="{{route('studentsetting')}}" ><img src="{{asset('../images/setting.png')}}" alt="setting"><p>{{__('room.setting')}}</p></a>
             <a href="{{route('notification',$student->id)}}"><img src="{{asset('../images/bell.png')}}" alt="notification"><p>{{__('room.notifications')}}</p></a>
             <a href="{{route('studentnew',$student->id )}}"><img src="{{asset('../images/new.png')}}" alt="new"><p>{{__('room.whatsnew')}}</p></a>
-            <a href="choice.html"><img src="{{asset('../images/add-user.png')}}" alt="add-user"><p>{{__('room.changeAccount')}}</p></a>
+            <a href="{{route('studentlogout')}}"><img src="{{asset('../images/add-user.png')}}" alt="add-user"><p>{{__('room.changeAccount')}}</p></a>
             <a href="{{route('studentResultsPage',$student->id )}}"><img src="{{asset('../images/icons8-help-49.png')}}" alt="contact"><p>{{__('room.results')}}</p></a>
 
             <hr>
