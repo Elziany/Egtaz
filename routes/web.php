@@ -29,6 +29,9 @@ Route::get('/', function () {
 Route::get('/choice', function () {
     return view('choice');
 })->name('choice');
+Route::get('/team', function () {
+    return view('Team');
+})->name('team');
 
 Route::get('/lecturersignup', [lecturerController::class,'lecturerSignup'])->name('lecturersignup');
 Route::get('/lecturerlogin', [lecturerController::class,'lecturerLogin'])->name('lecturerlogin');
@@ -83,6 +86,7 @@ Route::get('/student/exam/form/{id}/{exam_id}',[StudentController::class,'examfo
 Route::post('/student/check/results/{id}/{exam_id}',[StudentController::class,'studentCheckResults'])->name('studentCheckResults');
 Route::get('/student/results/{id}',[StudentController::class,'studentResultsPage'])->name('studentResultsPage');
 Route::get('/student/whats/new/{id}',[StudentController::class,'studentwhatsnew'])->name('studentnew');
+Route::get('/student/leaveRoom/{id}/{code}',[StudentController::class,'leaveRoom'])->name('leaveRoom');
 
 });
 });

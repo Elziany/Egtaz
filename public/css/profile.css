@@ -10,13 +10,7 @@
   --header-shadow: #f3e7f3;
 }
 
-.shortcut-links a:first-child,
-.shortcut-links a:nth-child(2) {
-  color: var(--text-color);
-}
-.shortcut-links a:nth-child(3) {
-  color: #ed3833;
-}
+
 
 .shortcut-links a {
   display: flex;

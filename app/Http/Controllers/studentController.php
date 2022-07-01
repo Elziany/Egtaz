@@ -13,7 +13,9 @@ use App\Events\message;
 use App\Events\studentMessage;
 use App\Models\RoomCourse;
 use App\Models\Exam;
+use App\Models\studentRoom;
 use App\Models\studentResults;
+
 use Illuminate\Support\Carbon;
 class studentController extends Controller
 
@@ -456,13 +458,22 @@ return view('student.results',compact('student'));
             $student=Student::find($id);
             return view('student.results',compact('student'));
           } 
-        
+        //whats new
           function studentwhatsnew($id){
             $student=Student::find($id);
             return view('student.whatsnew',compact('student'));
           }   
         
-        
+        //end function
+        //leave room function
+        function leaveRoom($id,$code){
+            $student_room=studentRoom::where('student_id',$id)->where('room_id',$code)->first()->delete();
+            
+            $student=Student::find($id);
+           
+            return redirect()->route('studentroom',compact('student'));
+
+        }
         }
     
 

@@ -107,8 +107,11 @@
 
    <div class="content">
       <h3>about us</h3>
-      <p>We've created a sample About Us template designed to work well for virtually any online store, blog, or website. Just fill in the brackets with your company's information and you'll have a professional About Us page written in minutes. If you want to put a personal touch on your page (which we highly recommend), check out the About Us examples below the template.</p>
-      <a href="" class="btn">read more</a>
+      <p>This Project was build from scratch using HTML5, CSS3, JavaScript, Bootstrap. 
+         It's complete Exam dashboard. Users can sign as Lecturer or student. 
+         Each student has in his rooms exams to take it. 
+         Each Lecturer is responsible on creating rooms, exams, setting roles.</p>
+      <a href="{{route('team')}}" class="btn">View our Team</a>
    </div>
 
 </section>
@@ -158,41 +161,36 @@
 <!-- home packages section ends -->
 
 <!-- footer section starts  -->
-
 <section class="footer">
 
    <div class="box-container">
 
       <div class="box">
          <h3>quick links</h3>
-         <a href="#"> <i class="fas fa-angle-right"></i> home</a>
-         <a href="#"> <i class="fas fa-angle-right"></i> about</a>
-         <a href="#"> <i class="fas fa-angle-right"></i> package</a>
-         <a href="#"> <i class="fas fa-angle-right"></i> exam</a>
+         <a href="#services"> <i class="fas fa-angle-right"></i> home</a>
+         <a href="#about"> <i class="fas fa-angle-right"></i> about</a>
+         <a href="#package"> <i class="fas fa-angle-right"></i> package</a>
       </div>
 
       <div class="box">
-         <h3>extra links</h3>
-         <a href="#"> <i class="fas fa-angle-right"></i> ask questions</a>
-         <a href="#"> <i class="fas fa-angle-right"></i> about us</a>
-         <a href="#"> <i class="fas fa-angle-right"></i> privacy policy</a>
-         <a href="#"> <i class="fas fa-angle-right"></i> terms of use</a>
+         <h3>Our Team</h3>
+         <a> <i class="fas fa-angle-right"></i> Youssef Turkey</a>
+         <a> <i class="fas fa-angle-right"></i> Mohamed Amr</a>
+         <a> <i class="fas fa-angle-right"></i> Mohamed Tareq</a>
+         <a> <i class="fas fa-angle-right"></i> Mahmoud Adel</a>
       </div>
 
       <div class="box">
          <h3>contact info</h3>
-         <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
-         <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
-         <a href="#"> <i class="fas fa-envelope"></i> shaikhanas@gmail.com </a>
-         <a href="#"> <i class="fas fa-map"></i> mumbai, india - 400104 </a>
+         <a href="mailto: youssef.turkey11@gmail.com"> <i class="fas fa-phone"></i> youssef.turkey11@gmail.com </a>
+         <a href="mailto: mohamedamro83@gmail.com"> <i class="fas fa-phone"></i> mohamedamro83@gmail.com </a>
+         <a href="mailto: madotarek15@gmail.com"> <i class="fas fa-envelope"></i> madotarek15@gmail.com </a>
+         <a href="mailto: mahmoud207200020@gmail.com"> <i class="fas fa-map"></i> mahmoud207200020@gmail.com </a>
       </div>
 
       <div class="box">
          <h3>follow us</h3>
-         <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-         <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-         <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-         <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+         <a href="https://github.com/YoussefTurkey/Egtaz-Platform" target="_blank"> <i class="fab fa-facebook-f"></i> Github </a>
       </div>
 
    </div>
@@ -200,6 +198,8 @@
    <div class="credit"> created by <span>Alexandria College of Science students web designer</span> | all rights reserved! </div>
 
 </section>
+
+<!-- footer section ends -->
 
 <!-- footer section ends -->
 

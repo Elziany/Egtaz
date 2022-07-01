@@ -39,16 +39,21 @@
 
 
         <!-- Quiz Box -->
-    <form class="quiz_box" action="{{route('studentCheckResults',[$student->id,$exam->id])}}" method="post">
+    <form class="quiz_box"  id="myForm"action="{{route('studentCheckResults',[$student->id,$exam->id])}}" method="post">
 @csrf
-        <header>
+
+<header>
             <div class="title">{{$exam->exam_name}}</div>
-            <div class="timer">
-                <div class="time_text">Time Left</div>
-                <div class="time_sec" id="counter"></div>
+            <div class="timeField">
+                <div class="timer" id="timer">
+                    <div class="time_text">Time Left</div>
+                    <div class="time_sec">
+                        <span id="hour"></span> : <span id="min"></span>:<span id="sec"></span> 
+                    </div>
+                </div>
+                <div id="hide">Hide Timer</div>
             </div>
         </header>
-
         <section>
 
             <div class="q">
@@ -168,10 +173,53 @@
         <!-- Main JS file -->
     <script src="{{asset('../js/exam.js')}}"></script>
     <script>
-     
-        var timer=document.querySelector('#counter');
-        time={{mktime(intval(date('h:i',strtotime($exam->end_date))))-mktime(intval(date('h:i')))}};
-        timer.innerHTML=Date().getMinutes();
+          exam_hours={{intval(date('h',strtotime($exam->end_date)))}}
+          exam_min={{intval(date('i',strtotime($exam->end_date)))}}
+
+        
+
+     form=document.getElementById('myForm');
+        now=new Date()
+
+        min=exam_min-(now.getMinutes())
+        hour=exam_hours-(now.getHours()-12)
+
+        sec=60;
+let time = setInterval(()=>{
+    timer()
+},1000);
+
+function timer(){
+    sec--;
+
+    if(sec==-1){
+        min--;
+        if(min==-1){
+            hour--;
+            if(hour==-1)
+            {
+                clearInterval(time);
+            alert('FullTime');
+            form.submit()
+            }
+            else{
+            min=60;
+            }
+            
+
+    
+      
+            
+        }
+        else{
+            sec=59;
+        }
+    }
+    document.getElementById('min').innerHTML = min;
+    document.getElementById('hour').innerHTML = hour;
+    document.getElementById('sec').innerHTML = sec;
+
+}
 
         
 

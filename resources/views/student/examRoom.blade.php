@@ -34,6 +34,6 @@
                 </div>
             </div>
             @endforeach
-            
+            <a href="{{route('leaveRoom',[$student->id,$room->id])}}"><img src="{{asset('images/feed.png')}}" id="myBtn" title="leave room"></a>            
 
 @endsection

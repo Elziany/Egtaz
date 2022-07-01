@@ -197,6 +197,26 @@ body {
   user-select: none;
 }
 
+.timeField{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#hide{
+  font-size: 20px;
+  color: #343a40;
+  cursor: pointer;
+  padding-left: 25px;
+}
+#hide:hover{
+  text-decoration: underline;
+}
+
+.disapper{
+  visibility: hidden;
+}
+
 .quiz_box section {
   padding: 25px 30px 20px 30px;
 }
